@@ -1,0 +1,240 @@
+{
+  "app": {
+    "errorTitle": "אין חיבור",
+    "errorBody": "CoTime צריך אינטרנט כדי להקים את השחקן שלך. בדקו את החיבור ונסו שוב.",
+    "retry": "לנסות שוב",
+    "notFound": "העמוד הזה הלך לאיבוד.",
+    "goHome": "למסך הבית"
+  },
+  "common": {
+    "back": "חזרה",
+    "cancel": "ביטול"
+  },
+  "onboarding": {
+    "tagline": "טלפונים למטה. עיניים למעלה. המפסיד מקבל פצצה.",
+    "title": "מי משחק?",
+    "subtitle": "צלמו סלפי — זה הפרצוף שהחברים יסדקו, ישרפו ויפוצצו ברגע שתיגעו בטלפון.",
+    "cta": "יאללה, משחקים"
+  },
+  "profile": {
+    "title": "השחקן שלי",
+    "selfie": "סלפי",
+    "library": "תמונות",
+    "removePhoto": "הסרת תמונה",
+    "tapToPreview": "הקישו על הפרצוף כדי לראות מה מחכה לו",
+    "smashPreview": "תצוגה מקדימה של הנזק",
+    "nameLabel": "שם",
+    "namePlaceholder": "למשל: דנה",
+    "save": "שמירה",
+    "cameraDenied": "הגישה למצלמה כבויה. אפשר להפעיל בהגדרות או לבחור מהתמונות.",
+    "photoFailed": "לא הצלחנו להשתמש בתמונה הזו. נסו אחרת.",
+    "sounds": "צלילים",
+    "soundsHint": "סירנות ופיצוצים — גם במצב שקט.",
+    "language": "שפה"
+  },
+  "home": {
+    "heroTitle": "טלפונים למטה.",
+    "heroSubtitle": "מוכנים, {{name}}? הראשון שנוגע בטלפון חוטף פצצה.",
+    "start": "משחק חדש",
+    "join": "הצטרפות עם קוד",
+    "how1": "פותחים משחק ומשתפים את הקוד עם השולחן.",
+    "how2": "כולם מניחים את הטלפון הפוך על השולחן. המסך נשאר דולק.",
+    "how3": "מרימים את הטלפון? הפרצוף שלכם נסדק, נשרף… או מתפוצץ.",
+    "recent": "משחקים אחרונים",
+    "players_one": "שחקן אחד",
+    "players_two": "{{count}} שחקנים",
+    "players_many": "{{count}} שחקנים",
+    "players_other": "{{count}} שחקנים",
+    "resultWon": "ניצחון",
+    "resultLost": "פוצץ",
+    "resultRank": "מקום {{rank}}"
+  },
+  "modes": {
+    "suddenDeath": {
+      "title": "מוות פתאומי",
+      "tagline": "הראשון שנוגע בטלפון מפסיד. מיד.",
+      "rules": "מי שמרים ראשון את הטלפון מסיים את המשחק — והפרצוף שלו מפוצץ. אף אחד לא נשבר עד סוף הזמן? כולם מנצחים."
+    },
+    "threeStrikes": {
+      "title": "שלוש פסילות",
+      "tagline": "כל הרמה עולה בחיים. האחרון שנשאר מנצח.",
+      "rules": "כל הרמה של הטלפון עולה בלב אחד וסודקת את הפרצוף עוד קצת. נגמרו הלבבות? בום. האחרון שנשאר מנצח."
+    },
+    "zen": {
+      "title": "מאסטר זן",
+      "tagline": "הכי מעט הרמות בסוף — מנצח.",
+      "rules": "משחקים לזמן קבוע. הכי מעט הרמות מנצח; בתיקו — מי שבילה פחות זמן בטלפון. הכי הרבה הרמות חוטף פצצה בסוף."
+    },
+    "timeBank": {
+      "title": "תקציב מסך",
+      "tagline": "לכל אחד כמה דקות טלפון. תבזבזו בחוכמה.",
+      "rules": "כולם מקבלים אותו תקציב זמן טלפון לערב. השעון רץ רק כשהטלפון ביד. נגמר התקציב? מתפוצצים."
+    }
+  },
+  "create": {
+    "title": "משחק חדש",
+    "pickMode": "בחרו את הרעל",
+    "howItWorks": "איך זה עובד",
+    "lives": "חיים",
+    "timeBank": "זמן טלפון לכל שחקן",
+    "duration": "אורך המשחק",
+    "noLimit": "בלי הגבלה",
+    "noLimitHint": {
+      "suddenDeath": "רץ עד שמישהו נשבר.",
+      "threeStrikes": "רץ עד שנשאר שחקן אחד.",
+      "zen": "במאסטר זן חייבים הגבלת זמן.",
+      "timeBank": "רץ עד שרק לשחקן אחד נשאר תקציב."
+    },
+    "durationHint": "כשהזמן נגמר, המשחק נגמר בכל הטלפונים.",
+    "minutes_one": "דקה",
+    "minutes_two": "{{count}} דק׳",
+    "minutes_many": "{{count}} דק׳",
+    "minutes_other": "{{count}} דק׳",
+    "hours_one": "שעה",
+    "hours_two": "שעתיים",
+    "hours_many": "{{count}} שעות",
+    "hours_other": "{{count}} שעות",
+    "stake": "מה המפסיד חייב?",
+    "stakePlaceholder": "או כתבו משהו משלכם…",
+    "cta": "יצירת משחק"
+  },
+  "stakes": {
+    "bill": "משלם את החשבון",
+    "round": "מזמין את הסיבוב הבא",
+    "dishes": "שוטף כלים",
+    "story": "מעלה סטורי מביך",
+    "dessert": "קונה קינוח"
+  },
+  "stake": {
+    "onTheLine": "על הכף"
+  },
+  "join": {
+    "title": "הצטרפות למשחק",
+    "heading": "הקלידו את הקוד",
+    "subtitle": "הוא מופיע אצל מי שפתח את המשחק.",
+    "codeLabel": "קוד משחק",
+    "cta": "הצטרפות"
+  },
+  "lobby": {
+    "code": "קוד משחק",
+    "copy": "העתקה",
+    "copied": "הועתק!",
+    "share": "שיתוף",
+    "shareMessage": "טלפונים למטה! הצטרפו למשחק CoTime שלי עם הקוד {{code}} — {{link}}",
+    "livesSetting_one": "לב אחד",
+    "livesSetting_two": "{{count}} לבבות",
+    "livesSetting_many": "{{count}} לבבות",
+    "livesSetting_other": "{{count}} לבבות",
+    "bankSetting_one": "דקת טלפון אחת",
+    "bankSetting_two": "{{count}} דקות טלפון",
+    "bankSetting_many": "{{count}} דקות טלפון",
+    "bankSetting_other": "{{count}} דקות טלפון",
+    "durationSetting_one": "משחק של דקה",
+    "durationSetting_two": "משחק של {{count}} דקות",
+    "durationSetting_many": "משחק של {{count}} דקות",
+    "durationSetting_other": "משחק של {{count}} דקות",
+    "noLimit": "בלי הגבלת זמן",
+    "players": "סביב השולחן · {{count}}/{{max}}",
+    "host": "מארח",
+    "start_one": "התחלה (רק אני)",
+    "start_two": "התחלה עם {{count}} שחקנים",
+    "start_many": "התחלה עם {{count}} שחקנים",
+    "start_other": "התחלה עם {{count}} שחקנים",
+    "soloHint": "יותר כיף עם חברים — שתפו קודם את הקוד.",
+    "waitingForHost": "מחכים ש{{name}} יתחיל…",
+    "tipsTitle": "לפני שמתחילים",
+    "tip1": "כשהספירה מתחילה, מניחים את הטלפון הפוך על השולחן.",
+    "tip2": "לא לנעול — המסך נשאר דולק כדי ש-CoTime ירגיש כשהוא זז.",
+    "tip3": "נגיעה במסך, יציאה מהאפליקציה או הרמת הטלפון — כולן נחשבות הרמה.",
+    "leave": "יציאה מהמשחק"
+  },
+  "live": {
+    "countdownLabel": "טלפונים למטה בעוד",
+    "putItDown": "טלפון הפוך על השולחן!",
+    "putItDownHint": "שטוח על השולחן. לא לנעול.",
+    "lockedIn": "נעולים",
+    "phonesDown": "{{placed}}/{{total}} טלפונים למטה",
+    "placeManually": "הטלפון שלי למטה",
+    "hurry": "מהר!",
+    "graceLeft": "עוד {{seconds}} שניות וזה נחשב הרמה",
+    "timeLeft": "נשאר",
+    "elapsed": "בלי טלפון",
+    "touchWarning": "נגיעה במסך נחשבת הרמה",
+    "busted": "נתפסת!",
+    "boom": "בום.",
+    "youreOut": "בחוץ.",
+    "outHint": "הטלפון כולו שלך עכשיו. כולם ראו.",
+    "livesLeft_one": "נשאר לב אחד",
+    "livesLeft_two": "נשארו {{count}} לבבות",
+    "livesLeft_many": "נשארו {{count}} לבבות",
+    "livesLeft_other": "נשארו {{count}} לבבות",
+    "bankLeft": "נשארו {{time}} של זמן טלפון",
+    "pickupNumber": "הרמה מס׳ {{count}}",
+    "heldFor": "📱 ביד כבר {{time}}",
+    "putItBack": "להחזיר הפוך לשולחן כדי להמשיך לשחק",
+    "putBackManually": "החזרתי אותו",
+    "endGame": "לסיים את המשחק לכולם",
+    "endGameTitle": "לסיים את המשחק?",
+    "endGameMessage": "כולם עוברים עכשיו למסך התוצאות."
+  },
+  "stats": {
+    "out": "💀 בחוץ",
+    "clean": "😇 נקי",
+    "pickups_one": "הרמה אחת",
+    "pickups_two": "{{count}} הרמות",
+    "pickups_many": "{{count}} הרמות",
+    "pickups_other": "{{count}} הרמות"
+  },
+  "feed": {
+    "joined": "{{name}} התיישב/ה",
+    "placed": "הטלפון של {{name}} למטה",
+    "pickup": "{{name}} הרים/ה את הטלפון! (#{{count}})",
+    "putdown": "{{name}} החזיר/ה אחרי {{duration}}",
+    "eliminated": "{{name}} התפוצץ/ה"
+  },
+  "results": {
+    "gameOver": "המשחק נגמר",
+    "youWon": "ניצחון!",
+    "youLost": "חטפת פצצה",
+    "reasonFirstPickup": "{{name}} נגע/ה ראשון/ה בטלפון.",
+    "reasonLastStanding": "{{name}} האחרון/ה שנשאר/ה.",
+    "reasonAllOut": "אף אחד לא שרד.",
+    "reasonTimeUp": "הזמן נגמר!",
+    "reasonHostEnded": "המארח סיים את המשחק.",
+    "winsOne": "אלוף בלי טלפון",
+    "winsMany": "אלופים בלי טלפון",
+    "loserLabel": "פוצץ",
+    "bombAgain": "הקישו לעוד פצצה 💣",
+    "owesOne": "חייב לשולחן: {{stake}}",
+    "owesMany": "מתחלקים: {{stake}}",
+    "nobodyOwes": "אף אחד לא הפסיד — \"{{stake}}\" ירד מהפרק.",
+    "standings": "טבלה",
+    "offTable": "{{time}} בטלפון",
+    "awards": "פרסים",
+    "rematch": "משחק חוזר 🔁",
+    "joinRematch": "הצטרפות למשחק החוזר 🔁",
+    "home": "למסך הבית"
+  },
+  "awards": {
+    "monk": { "title": "מצב נזיר", "detail": "אפס הרמות" },
+    "quickDraw": { "title": "השולף המהיר", "detail": "הראשון להישבר" },
+    "zombie": { "title": "זומבי טלפון", "detail": "{{time}} בטלפון" },
+    "doomscroll": { "title": "הגלילה הארוכה", "detail": "{{time}} ברצף" },
+    "cantStop": { "title": "לא מסוגל להפסיק", "detail_one": "הרמה אחת", "detail_two": "{{count}} הרמות", "detail_many": "{{count}} הרמות", "detail_other": "{{count}} הרמות" }
+  },
+  "session": {
+    "joinThis": "להצטרף למשחק הזה?",
+    "alreadyStarted": "המשחק הזה כבר התחיל בלעדיך.",
+    "cancelled": "המארח ביטל את המשחק."
+  },
+  "errors": {
+    "generic": "משהו השתבש. נסו שוב.",
+    "offline": "אין חיבור לאינטרנט.",
+    "permission": "אין הרשאה. נסו שוב מההתחלה.",
+    "SESSION_NOT_FOUND": "אין משחק פתוח עם הקוד הזה.",
+    "GAME_ALREADY_STARTED": "המשחק הזה כבר התחיל.",
+    "GAME_FULL": "השולחן מלא.",
+    "NOT_HOST": "רק המארח יכול לעשות את זה.",
+    "CODE_GENERATION_FAILED": "לא הצלחנו ליצור קוד. נסו שוב."
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "app": {
+    "errorTitle": "Couldn't connect",
+    "errorBody": "CoTime needs the internet to set up your player. Check your connection and try again.",
+    "retry": "Try again",
+    "notFound": "This page wandered off.",
+    "goHome": "Go home"
+  },
+  "common": {
+    "back": "Back",
+    "cancel": "Cancel"
+  },
+  "onboarding": {
+    "tagline": "Phones down. Eyes up. Loser gets bombed.",
+    "title": "Who are you?",
+    "subtitle": "Snap a selfie — it's the face your friends will crack, burn and blow up when you reach for your phone.",
+    "cta": "Let's play"
+  },
+  "profile": {
+    "title": "Your player",
+    "selfie": "Selfie",
+    "library": "Photos",
+    "removePhoto": "Remove photo",
+    "tapToPreview": "Tap your face to preview your fate",
+    "smashPreview": "Preview the damage",
+    "nameLabel": "Your name",
+    "namePlaceholder": "e.g. Dana",
+    "save": "Save",
+    "cameraDenied": "Camera access is off. Allow it in Settings, or pick from Photos.",
+    "photoFailed": "Couldn't use that photo. Try another one.",
+    "sounds": "Sounds",
+    "soundsHint": "Sirens and explosions — even on silent mode.",
+    "language": "Language"
+  },
+  "home": {
+    "heroTitle": "Phones down.",
+    "heroSubtitle": "Ready, {{name}}? First one to touch their phone gets bombed.",
+    "start": "Start a game",
+    "join": "Join with code",
+    "how1": "Start a game and share the code with the table.",
+    "how2": "Everyone puts their phone face down. Screen stays on.",
+    "how3": "Pick yours up and your face gets cracked, burned… or bombed.",
+    "recent": "Recent games",
+    "players_one": "{{count}} player",
+    "players_other": "{{count}} players",
+    "resultWon": "Won",
+    "resultLost": "Bombed",
+    "resultRank": "#{{rank}}"
+  },
+  "modes": {
+    "suddenDeath": {
+      "title": "Sudden Death",
+      "tagline": "First to touch their phone loses. Instantly.",
+      "rules": "The first person to pick up their phone ends the game — and gets their face nuked. Nobody cracks before the timer? Everyone wins."
+    },
+    "threeStrikes": {
+      "title": "Three Strikes",
+      "tagline": "Every pickup costs a life. Last one standing wins.",
+      "rules": "Each pickup costs a heart and cracks your face a little more. Run out of hearts and you get blown up. Last player standing wins."
+    },
+    "zen": {
+      "title": "Zen Master",
+      "tagline": "Fewest pickups by the end wins.",
+      "rules": "Play for a set time. Fewest pickups wins; ties go to whoever spent less time on their phone. Most pickups gets bombed at the end."
+    },
+    "timeBank": {
+      "title": "Screen Time Budget",
+      "tagline": "Everyone gets a few minutes of phone. Spend wisely.",
+      "rules": "Everyone gets the same phone-time budget for the night. The clock only runs while your phone is in your hand. Burn through it and you explode."
+    }
+  },
+  "create": {
+    "title": "New game",
+    "pickMode": "Pick your poison",
+    "howItWorks": "How it works",
+    "lives": "Lives",
+    "timeBank": "Phone time per player",
+    "duration": "Game length",
+    "noLimit": "No limit",
+    "noLimitHint": {
+      "suddenDeath": "Runs until someone cracks.",
+      "threeStrikes": "Runs until one player is left.",
+      "zen": "Zen Master needs a time limit.",
+      "timeBank": "Runs until one player has budget left."
+    },
+    "durationHint": "When time's up, the game ends on every phone.",
+    "minutes_one": "{{count}} min",
+    "minutes_other": "{{count}} min",
+    "hours_one": "{{count}} hour",
+    "hours_other": "{{count}} hours",
+    "stake": "What does the loser owe?",
+    "stakePlaceholder": "Or write your own…",
+    "cta": "Create game"
+  },
+  "stakes": {
+    "bill": "Pays the bill",
+    "round": "Buys the next round",
+    "dishes": "Does the dishes",
+    "story": "Posts an embarrassing story",
+    "dessert": "Buys dessert"
+  },
+  "stake": {
+    "onTheLine": "On the line"
+  },
+  "join": {
+    "title": "Join a game",
+    "heading": "Enter the code",
+    "subtitle": "It's on the host's screen.",
+    "codeLabel": "Game code",
+    "cta": "Join"
+  },
+  "lobby": {
+    "code": "Game code",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "share": "Share",
+    "shareMessage": "Phones down! Join my CoTime game with code {{code}} — {{link}}",
+    "livesSetting_one": "{{count}} life",
+    "livesSetting_other": "{{count}} lives",
+    "bankSetting_one": "{{count}} min of phone time",
+    "bankSetting_other": "{{count}} min of phone time",
+    "durationSetting_one": "{{count}} min game",
+    "durationSetting_other": "{{count}} min game",
+    "noLimit": "No time limit",
+    "players": "At the table · {{count}}/{{max}}",
+    "host": "Host",
+    "start_one": "Start (just me)",
+    "start_other": "Start with {{count}} players",
+    "soloHint": "It's more fun with friends — share the code first.",
+    "waitingForHost": "Waiting for {{name}} to start…",
+    "tipsTitle": "Before you start",
+    "tip1": "When the countdown starts, put your phone face down on the table.",
+    "tip2": "Don't lock it — the screen stays on so CoTime can tell when it moves.",
+    "tip3": "Touching the screen, leaving the app or lifting the phone all count as a pickup.",
+    "leave": "Leave game"
+  },
+  "live": {
+    "countdownLabel": "Phones down in",
+    "putItDown": "Phone face down!",
+    "putItDownHint": "Flat on the table. Don't lock it.",
+    "lockedIn": "Locked in",
+    "phonesDown": "{{placed}}/{{total}} phones down",
+    "placeManually": "My phone is down",
+    "hurry": "Hurry!",
+    "graceLeft": "{{seconds}}s before it counts as a pickup",
+    "timeLeft": "left",
+    "elapsed": "phone-free",
+    "touchWarning": "Touching the screen counts as a pickup",
+    "busted": "BUSTED!",
+    "boom": "BOOM.",
+    "youreOut": "You're out.",
+    "outHint": "Your phone is all yours now. Everyone saw.",
+    "livesLeft_one": "{{count}} life left",
+    "livesLeft_other": "{{count}} lives left",
+    "bankLeft": "{{time}} of phone time left",
+    "pickupNumber": "Pickup #{{count}}",
+    "heldFor": "📱 In your hand: {{time}}",
+    "putItBack": "Put it back face down to keep playing",
+    "putBackManually": "I put it back",
+    "endGame": "End game for everyone",
+    "endGameTitle": "End the game?",
+    "endGameMessage": "Everyone goes to the results screen right now."
+  },
+  "stats": {
+    "out": "💀 out",
+    "clean": "😇 clean",
+    "pickups_one": "{{count}} pickup",
+    "pickups_other": "{{count}} pickups"
+  },
+  "feed": {
+    "joined": "{{name}} sat down",
+    "placed": "{{name}}'s phone is down",
+    "pickup": "{{name}} picked up their phone! (#{{count}})",
+    "putdown": "{{name}} put it back after {{duration}}",
+    "eliminated": "{{name}} got blown up"
+  },
+  "results": {
+    "gameOver": "Game over",
+    "youWon": "You won!",
+    "youLost": "You got bombed",
+    "reasonFirstPickup": "{{name}} touched their phone first.",
+    "reasonLastStanding": "{{name}} is the last one standing.",
+    "reasonAllOut": "Nobody made it.",
+    "reasonTimeUp": "Time's up!",
+    "reasonHostEnded": "The host ended the game.",
+    "winsOne": "Phone-free champion",
+    "winsMany": "Phone-free champions",
+    "loserLabel": "Bombed",
+    "bombAgain": "Tap to bomb again 💣",
+    "owesOne": "Owes the table: {{stake}}",
+    "owesMany": "Split it: {{stake}}",
+    "nobodyOwes": "Nobody lost — \"{{stake}}\" is off the hook.",
+    "standings": "Standings",
+    "offTable": "{{time}} on phone",
+    "awards": "Awards",
+    "rematch": "Rematch 🔁",
+    "joinRematch": "Join the rematch 🔁",
+    "home": "Home"
+  },
+  "awards": {
+    "monk": { "title": "Monk Mode", "detail": "Zero pickups" },
+    "quickDraw": { "title": "Quickest Draw", "detail": "First to crack" },
+    "zombie": { "title": "Phone Zombie", "detail": "{{time}} on the phone" },
+    "doomscroll": { "title": "Longest Doomscroll", "detail": "{{time}} in one go" },
+    "cantStop": { "title": "Can't Stop", "detail_one": "{{count}} pickup", "detail_other": "{{count}} pickups" }
+  },
+  "session": {
+    "joinThis": "Join this game?",
+    "alreadyStarted": "This game already started without you.",
+    "cancelled": "The host cancelled this game."
+  },
+  "errors": {
+    "generic": "Something went wrong. Try again.",
+    "offline": "You're offline. Check your connection.",
+    "permission": "Not allowed. Try again from the start.",
+    "SESSION_NOT_FOUND": "No open game with that code.",
+    "GAME_ALREADY_STARTED": "That game already started.",
+    "GAME_FULL": "That table is full.",
+    "NOT_HOST": "Only the host can do that.",
+    "CODE_GENERATION_FAILED": "Couldn't make a game code. Try again."
+  }
+}

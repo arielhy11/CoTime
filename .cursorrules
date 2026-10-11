@@ -1,0 +1,10 @@
+# CoTime
+
+Same conventions as CoMission. Fail fast. No fallbacks or dual data formats. No `any`. No `Alert.alert()` — use ConfirmModal.
+
+- DB only through `src/api/`. Component → Store → API → Database.
+- Game logic lives in `src/game/` as pure functions with tests. API applies rule outcomes inside transactions.
+- Identify users by uid. Models flat.
+- Zustand stores own backend data and `onSnapshot`. Hooks are UI/device wiring only.
+- All copy through i18n (`src/i18n/locales/en.json` + `he.json`), all text through `AppText`. 44pt targets.
+- New pure module → matching test in `__tests__/`.
