@@ -1,7 +1,7 @@
 import * as Clipboard from 'expo-clipboard';
 import { Copy, Share2 } from 'lucide-react-native';
 import { useEffect, useRef, useState } from 'react';
-import { BackHandler, Pressable, Share, StyleSheet, View } from 'react-native';
+import { BackHandler, Platform, Pressable, Share, StyleSheet, View } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { AvatarFace } from '../../components/avatar/AvatarArt';
 import { AppText } from '../../components/common/AppText';
@@ -58,8 +58,21 @@ export function LobbyView({ session, players, profiles, myUid, onStart, onLeave,
     setTimeout(() => setCopied(false), 1500);
   };
 
-  const share = () => {
-    void Share.share({ message: t('lobby.shareMessage', { code: session.code, link: `cotime://join?code=${session.code}` }) });
+  const share = async () => {
+    const link =
+      Platform.OS === 'web' && typeof window !== 'undefined'
+        ? `${window.location.origin}/cotime/join?code=${session.code}`
+        : `cotime://join?code=${session.code}`;
+    const message = t('lobby.shareMessage', { code: session.code, link });
+    try {
+      await Share.share({ message });
+    } catch {
+      // Browsers without the Web Share API: put the invite on the clipboard instead.
+      await Clipboard.setStringAsync(message);
+      buzzSuccess();
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    }
   };
 
   const start = async () => {
@@ -102,7 +115,7 @@ export function LobbyView({ session, players, profiles, myUid, onStart, onLeave,
             <Copy color={colors.text} size={18} />
             <AppText variant="bold">{copied ? t('lobby.copied') : t('lobby.copy')}</AppText>
           </Pressable>
-          <Pressable onPress={share} style={styles.iconButton} accessibilityRole="button" accessibilityLabel={t('lobby.share')}>
+          <Pressable onPress={() => void share()} style={styles.iconButton} accessibilityRole="button" accessibilityLabel={t('lobby.share')}>
             <Share2 color={colors.text} size={18} />
             <AppText variant="bold">{t('lobby.share')}</AppText>
           </Pressable>

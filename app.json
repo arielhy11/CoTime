@@ -70,7 +70,8 @@
       "expo-localization"
     ],
     "experiments": {
-      "typedRoutes": true
+      "typedRoutes": true,
+      "baseUrl": "/cotime"
     },
     "runtimeVersion": {
       "policy": "appVersion"
