@@ -1,8 +1,0 @@
-/cokids/*
-  X-Robots-Tag: noindex, nofollow, noarchive
-  Referrer-Policy: no-referrer
-  X-Content-Type-Options: nosniff
-  Permissions-Policy: camera=(self), microphone=(), geolocation=(), payment=()
-
-/cokids/sw.js
-  Cache-Control: no-cache
