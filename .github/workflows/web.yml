@@ -1,0 +1,66 @@
+name: Web build
+
+# Builds the Expo web app for cohuman.dev/cotime and publishes the ready-to-host
+# folder to the `web-dist` branch (also attached to each run as an artifact).
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: web-build
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      EXPO_PUBLIC_API_KEY: AIzaSyBrazWNRuIqMyccx5lpjTglASnps_pm4nI
+      EXPO_PUBLIC_AUTH_DOMAIN: cotime-5ef18.firebaseapp.com
+      EXPO_PUBLIC_PROJECT_ID: cotime-5ef18
+      EXPO_PUBLIC_STORAGE_BUCKET: cotime-5ef18.firebasestorage.app
+      EXPO_PUBLIC_MESSAGING_SENDER_ID: "184355196707"
+      EXPO_PUBLIC_APP_ID: "1:184355196707:web:d1d5c0b5595a660097c696"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install --legacy-peer-deps --no-audit --no-fund
+      - run: npx jest --ci
+      - run: npx expo export -p web
+      - name: Assemble site
+        run: |
+          rm -rf site && mkdir -p site/cotime
+          cp -R dist/. site/cotime/
+          cat > site/_redirects <<'R'
+          /            /cotime/               302
+          /CoTime/*    /cotime/:splat         301
+          /cotask/*    /cotime/:splat         301
+          /CoTask/*    /cotime/:splat         301
+          /cotime/*    /cotime/index.html     200
+          R
+          sed -i 's/^ *//' site/_redirects
+          cat > site/_headers <<'H'
+          /cotime/_expo/static/*
+            Cache-Control: public, max-age=31536000, immutable
+          H
+          sed -i 's/^          //' site/_headers
+          du -sh site
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: site
+      - name: Publish to web-dist branch
+        run: |
+          cd site
+          git init -q -b web-dist
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Web build for ${GITHUB_SHA}"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${GITHUB_REPOSITORY}.git" web-dist
