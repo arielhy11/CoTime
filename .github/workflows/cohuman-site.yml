@@ -23,16 +23,23 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p out/cokids
-          get() { curl -fsSL --retry 3 "https://cohuman.dev/$1" -o "out/$1"; echo "::notice::fetched $1 ($(wc -c < "out/$1") bytes)"; }
+          get() { curl -fsSL --retry 3 "https://cohuman.dev/$1" -o "out/$1"; }
           get index.html
           get robots.txt
           for f in index.html sw.js manifest.webmanifest icon-192.png icon-512.png icon-maskable-512.png; do get "cokids/$f"; done
-          # Report response headers so the site's _headers rules can be reproduced exactly.
-          for p in / /robots.txt /cokids/ /cokids/sw.js /cokids/manifest.webmanifest /cokids/icon-192.png; do
-            curl -fsSI "https://cohuman.dev$p" | grep -iE '^(cache-control|x-robots-tag|service-worker-allowed|content-type|x-frame-options|x-content-type-options|referrer-policy|permissions-policy|content-security-policy):' \
-              | tr -d '\r' | while IFS= read -r h; do echo "::notice::HDR $p -> $h"; done
+          # Netlify injects its HUD script into served HTML; remove it to get the original files back.
+          for f in out/index.html out/cokids/index.html; do
+            perl -0pi -e 's#<script[^>]*/\.netlify/[^>]*>\s*</script>##g' "$f"
           done
-          grep -oE "['\"][^'\"]+\.(png|webmanifest|html|js|svg|json|ico)['\"]" out/cokids/sw.js | sort -u | head -30 | while IFS= read -r l; do echo "::notice::SW precache $l"; done
+          echo "::notice::SIZES $(cd out && find . -type f -printf '%p=%s ' | sort)"
+          # Report response headers (one line per path) so _headers can be reproduced exactly.
+          for p in / /robots.txt /cokids/ /cokids/sw.js /cokids/manifest.webmanifest /cokids/icon-192.png; do
+            h=$(curl -fsSI "https://cohuman.dev$p" | tr -d '\r' | grep -iE '^(cache-control|x-robots-tag|service-worker-allowed|content-type|x-frame-options|x-content-type-options|referrer-policy|permissions-policy|content-security-policy):' | tr '\n' '|')
+            echo "::notice::HDR $p -> $h"
+          done
+          echo "::notice::SW $(grep -oE "['\"][^'\"]+\.(png|webmanifest|html|js|svg|json|ico)['\"]" out/cokids/sw.js | sort -u | tr '\n' ' ')"
+          grep -c '\.netlify/' out/index.html out/cokids/index.html || true
+          [ -f web/cohuman/_headers ] && cp web/cohuman/_headers out/_headers
           cp web/cohuman/_redirects out/_redirects
           ls -la out out/cokids
       - name: Publish package branch
