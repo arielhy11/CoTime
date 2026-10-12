@@ -57,6 +57,20 @@ jobs:
             Cache-Control: public, max-age=31536000, immutable
           H
           sed -i 's/^          //' site/_headers
+          # GitHub Pages hosting for cohuman.dev (no Jekyll: it would drop the _expo folder)
+          touch site/.nojekyll
+          echo "cohuman.dev" > site/CNAME
+          cat > site/index.html <<'HTML'
+          <!doctype html><html><head><meta charset="utf-8"><title>CoTime</title>
+          <meta http-equiv="refresh" content="0; url=/cotime/">
+          <script>location.replace('/cotime/' + location.search + location.hash)</script>
+          </head><body><a href="/cotime/">CoTime</a></body></html>
+          HTML
+          sed -i 's/^          //' site/index.html
+          # Deep links (e.g. /cotime/join?code=ABCD) fall through to 404.html, which is the app itself.
+          # Old/capitalised paths (/CoTime, /cotask, /CoTask) are bounced to /cotime first.
+          sed 's#<head>#<head><script>(function(){var m=location.pathname.match(/^\\/(cotime|cotask)(\\/.*)?$/i);if(m\&\&m[1]!=="cotime"){location.replace("/cotime"+(m[2]||"/")+location.search+location.hash)}})()</script>#' site/cotime/index.html > site/404.html
+          grep -c 'cotask' site/404.html
           du -sh site
       - uses: actions/upload-artifact@v4
         with:
