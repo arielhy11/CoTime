@@ -1,0 +1,3 @@
+# cohuman.dev → CoTime lives on its own Netlify site; serve it here at /cotime.
+/cotime     https://gleaming-croissant-02d1fa.netlify.app/cotime/        200
+/cotime/*   https://gleaming-croissant-02d1fa.netlify.app/cotime/:splat  200
