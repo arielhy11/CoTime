@@ -1,0 +1,5 @@
+/            /cotime/               302
+/CoTime/*    /cotime/:splat         301
+/cotask/*    /cotime/:splat         301
+/CoTask/*    /cotime/:splat         301
+/cotime/*    /cotime/index.html     200
